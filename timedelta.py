@@ -14,10 +14,10 @@ class TimedeltaRus(timedelta):
         if dd:
             ldd = dd % 10
             if (ldd == 0 or 5 <= ldd <= 9) or dd % 100 in {11, 12, 13, 14}:
-                back = "ей"
+                day = "дней"
             elif 2 <= ldd <= 4:
-                back = "я"
+                day = "дня"
             else:
-                back = "нь"
-            return f"{dd} дн{back}, {hh}:{mm}:{ss}{ms}"
+                day = "день"
+            return f"{dd} {day}, {hh}:{mm}:{ss}{ms}"
         return f"{hh}:{mm}:{ss}{mm}"
