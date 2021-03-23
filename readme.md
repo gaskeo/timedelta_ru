@@ -2,9 +2,15 @@
 библиотека, которая содержит русификатор класса `timedelta`
       
 ### Использование
-`>>> from timedelta_russifier.timedelta import TimedeltaRus`
+##### Вывод полной даты
+````
+>>> print(TimedeltaRus(days=117, seconds=6612))
+117 дней, 1:50:12
+````
 
-`>>> print(TimedeltaRus(days=117, seconds=6612))`
-
-`117 дней, 1:50:12`
+##### Вывод только дней  
+````
+>>> print(TimedeltaRus(days=117, seconds=6612).get_days())
+117 дней
+````
 
