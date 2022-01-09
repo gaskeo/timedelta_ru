@@ -1,16 +1,26 @@
-# Русификатор для timedelta
-библиотека, которая содержит русификатор класса `timedelta`
+# Русификатор для `timedelta`
+Библиотека с русской версией `__str__` для `datetime.timedelta`
       
 ### Использование
-##### Вывод полной даты
-````
->>> print(TimedeltaRus(days=117, seconds=6612))
+```
+>>> from timedelta_ru import TimedeltaRu
+>>> print(TimedeltaRu(days=117, seconds=6612))
 117 дней, 1:50:12
-````
+>>> td_str = str(TimedeltaRu(days=12, seconds=612))
+12 дней, 0:10:12
+```
 
-##### Вывод только дней  
-````
->>> print(TimedeltaRus(days=117, seconds=6612).get_days())
-117 дней
-````
+### Тестирование
+#### pytest
+Для тестирования используется библиотека [pytest](https://docs.pytest.org/en/6.2.x/)
+
+Установка `pytest`:
+```
+$ pip install pytest
+```
+
+#### Команда для запуска
+```
+$ pytest tests.py
+```
 
